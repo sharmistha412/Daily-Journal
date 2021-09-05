@@ -3,7 +3,23 @@
 <div class="main">
     <h1>Home</h1>
     <p><%=hom%></p>
+
+    <% if(newListItems.length!=0){%>
+        
+            <!-- here we are retriving the from the arraylist and displaying it in the li using a loop -->
+            <!-- <% for(var i=0;i<newListItems.length;i++){%>
+               <h3><%= newListItems[i].post %></h3>
+               <p><%= newListItems[i].post_des %></p>
+            <% }%> -->
+
+        <%    newListItems.forEach(function(item){     %>
+            <h3><%= item.post %></h3>
+            <p><span class="text"><%= item.post_des %></span><a href="/posts/<%=item.post%>">Read Me</a></p>
+        <%    });  %>
+             
+   <% }%>
+
 </div>
 
 
-<%-include("partials/footer")-%>
+<!-- <%-include("partials/footer")-%> -->

@@ -2,6 +2,12 @@
 .main{
     margin: 20px 50px;
 }
+.text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .footer-basic {
     padding:40px 0;
     background-color:#ffffff;
